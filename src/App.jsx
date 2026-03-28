@@ -1,6 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { sendToClaudeAPI } from "./services/claudeApi";
 import "./App.css";
+headers: {
+  "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
+}
 
 function App() {
   const [messages, setMessages] = useState([
